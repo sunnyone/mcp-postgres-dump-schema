@@ -23,5 +23,17 @@
   "files": [
     "dist"
   ],
+  "keywords": [
+    "mcp",
+    "postgres",
+    "postgresql",
+    "schema",
+    "dump",
+    "pg_dump"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunnyone/mcp-postgres-dump-schema.git"
+  },
   "license": "MIT"
 }
