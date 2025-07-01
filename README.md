@@ -44,7 +44,7 @@ Executes `pg_dump --schema-only` to get the database schema.
 - `host` (optional): Database host (overrides PGHOST)
 - `port` (optional): Database port (overrides PGPORT)
 - `username` (optional): Database username (overrides PGUSER)
-- `username` (optional): Database password (overrides PGPASSWORD)
+- `password` (optional): Database password (overrides PGPASSWORD)
 
 **Returns:** The schema dump as text.
 
