@@ -113,11 +113,16 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       if (code !== 0) {
         reject(new Error(`pg_dump failed with code ${code}: ${stderr}`));
       } else {
+        const filteredOutput = stdout
+          .split('\n')
+          .filter(line => !line.startsWith('--') && line.trim() !== '')
+          .join('\n');
+        
         resolve({
           content: [
             {
               type: "text",
-              text: stdout,
+              text: filteredOutput,
             },
           ],
         });
