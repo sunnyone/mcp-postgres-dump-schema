@@ -10,7 +10,7 @@ import { spawn } from "child_process";
 
 const server = new Server(
   {
-    name: "mcp-postgres-dump-schema",
+    name: "postgres-dump-schema",
     version: "1.0.0",
   },
   {

@@ -35,7 +35,7 @@ export PGPASSWORD=mypassword
 
 The server provides one tool:
 
-### `pg_dump_schema`
+### `postgres_dump_schema`
 
 Executes `pg_dump --schema-only` to get the database schema.
 
