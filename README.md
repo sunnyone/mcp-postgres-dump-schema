@@ -2,14 +2,30 @@
 
 A Model Context Protocol (MCP) server that executes `pg_dump --schema-only` to retrieve PostgreSQL database schemas.
 
-## Build
+## JSON Usage
 
-```bash
-npm install
-npm run build
+Configure the MCP server with JSON (like .mcp.json):
+```
+{
+  "mcpServers": {
+    "postgres-dump-schema": {
+      "command": "npx",
+      "args": [
+        "mcp-postgres-dump-schema"
+      ],
+      "env": {
+        "PGHOST": "localhost",
+        "PGPORT": "5432",
+        "PGDATABASE": "dvdrental",
+        "PGUSER": "dvdrental",
+        "PGPASSWORD": "dvdrental"
+      }
+    }
+  }
+}
 ```
 
-## Usage
+## Configuration
 
 The server uses environment variables for database connection configuration:
 
@@ -28,7 +44,7 @@ export PGDATABASE=mydb
 export PGUSER=myuser
 export PGPASSWORD=mypassword
 
-./dist/index.js
+npx postgres_dump_schema
 ```
 
 ## Tool
@@ -47,6 +63,13 @@ Executes `pg_dump --schema-only` to get the database schema.
 - `password` (optional): Database password (overrides PGPASSWORD)
 
 **Returns:** The schema dump as text.
+
+## Build
+
+```bash
+npm install
+npm run build
+```
 
 ## License
 
