@@ -1,6 +1,6 @@
 {
   "name": "mcp-postgres-dump-schema",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "MCP server for executing pg_dump --schema-only",
   "type": "module",
   "main": "dist/index.js",
